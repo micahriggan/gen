@@ -1,3 +1,4 @@
+
 *.csv
 *.dat
 *.iml
@@ -13,8 +14,8 @@
 .DS_Store
 .idea
 .project
-.tmuxp.yaml
 .strong-pm
+.tmuxp.yaml
 coverage
 node_modules
 npm-debug.log
