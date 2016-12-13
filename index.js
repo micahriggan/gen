@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 // this program will take in multiple arguments
 // the first argument shall be the name of the generator to use
 // all generators will be put in the generators/ directory
@@ -12,7 +13,7 @@ if(generatorName ===''){
 	console.log('Please select a valid generator. Use --list to list all generators');
 }
 else if (generatorName === '--list') {
-	console.log(Object.keys(generators));	
+	console.log(Object.keys(generators));
 }
 else{
 	var generator = generators[generatorName];
