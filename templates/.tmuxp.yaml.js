@@ -1,27 +1,21 @@
-module.exports = 
+module.exports =
 `
 session_name: watchthis
 windows:
-- window_name: vim frontend
+- window_name: vim
   shell_command_before:
-  - cd ~/Documents/Projects/watchthis-frontend
+  - cd ~
   panes:
   - vim
-- window_name: npm/git frontend
+- window_name: npm/git
   shell_command_before:
-  - cd ~/Documents/Projects/watchthis-frontend
+  - cd ~
   panes:
   - git status
   - npm start
-- window_name: vim loopback
+- window_name: karma
   shell_command_before:
-  - cd ~/Documents/Projects/watchthis-loopback
+  - cd ~
   panes:
-  - vim
-- window_name: npm/git loopback
-  shell_command_before:
-  - cd ~/Documents/Projects/watchthis-loopback
-  panes:
-  - git status
-  - npm start
+  - karma start
 `;
