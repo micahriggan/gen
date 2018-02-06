@@ -1,4 +1,4 @@
-{
+module.exports = `{
   "compilerOptions": {
     "noImplicitAny": false,
       "removeComments": true,
@@ -22,4 +22,4 @@
     "exclude": [
       "node_modules"
     ]
-}
+}`;

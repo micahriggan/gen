@@ -8,12 +8,15 @@ module.exports = function(templateData, data) {
   if (templateData.hasOwnProperty('file'))
     fileName = templateData.file;
   var template = require(path.join('../templates/', templateName));
-  if (typeof(template) === 'function')
+  if (typeof(template) === 'function'){
     template = template(data);
+  }
   fs.writeFile(fileName, template, (err) => {
-    if (err)
+    if (err) {
       console.log(err);
-    else console.log( `${fileName} created via template : ${templateName}`);
+    } else {
+      console.log( `${fileName} created via template : ${templateName}`);
+    }
   });
 
 };

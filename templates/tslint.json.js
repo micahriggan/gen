@@ -1,4 +1,4 @@
-{
+module.exports = `{
   "extends": "tslint:recommended",
     "rules": {
       "no-magic-numbers": true,
@@ -17,4 +17,4 @@
         "member-ordering": [false],
         "align": [false]
     }
-}
+}`;
