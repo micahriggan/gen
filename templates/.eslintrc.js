@@ -1,7 +1,7 @@
-module.exports = 
+module.exports =
 `
 {
-  "extends": "loopback,
+  "extends": "loopback",
   "env": {
         "browser": true,
         "es6": true,
