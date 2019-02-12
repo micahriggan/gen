@@ -7,7 +7,15 @@ module.exports = function(templateData, data) {
     templateName = templateData.template;
   if (templateData.hasOwnProperty('file'))
     fileName = templateData.file;
-  var template = require(path.join('../templates/', templateName));
+  const basePath = path.resolve(__dirname, '../templates/');
+  const templatePath = path.join(basePath, templateName);
+  if(!fs.existsSync(templatePath)) {
+    console.log('Please select a valid generator from the list');
+    const isDirectory = (path) => fs.lstatSync(path).isDirectory();
+    console.log(fs.readdirSync(basePath))
+    return;
+  }
+  var template = require(templatePath);
   if (typeof(template) === 'function'){
     template = template(data);
   }
