@@ -1,7 +1,7 @@
 module.exports = {
-  test: require('./test.js'),
-  template: require('./template.js'),
-  nodeDotFiles: require('./nodeDotFiles.js'),
-  ngComp: require('./ng-component.js'),
+  test: require('./test'),
+  template: require('./template'),
+  nodeDotFiles: require('./nodeDotFiles'),
+  ngComp: require('./ng-component'),
   readme: require('./readme')
 };

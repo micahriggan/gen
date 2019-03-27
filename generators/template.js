@@ -8,7 +8,7 @@ module.exports = function(templateData, data) {
   if (templateData.hasOwnProperty('file'))
     fileName = templateData.file;
   const basePath = path.resolve(__dirname, '../templates/');
-  const templatePath = path.join(basePath, templateName);
+  const templatePath = path.join(basePath, templateName + '.js');
   if(!fs.existsSync(templatePath)) {
     console.log('Please select a valid generator from the list');
     const isDirectory = (path) => fs.lstatSync(path).isDirectory();
