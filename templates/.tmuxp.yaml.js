@@ -1,6 +1,6 @@
 module.exports =
 `
-session_name: watchthis
+session_name: coding
 windows:
 - window_name: vim
   shell_command_before:
@@ -13,9 +13,10 @@ windows:
   panes:
   - git status
   - npm start
-- window_name: karma
+- window_name: testing
   shell_command_before:
   - cd .
   panes:
-  - karma start
+  - echo "tests"
+  - echo "tests"
 `;

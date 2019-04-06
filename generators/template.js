@@ -12,7 +12,8 @@ module.exports = function(templateData, data) {
   if(!fs.existsSync(templatePath)) {
     console.log('Please select a valid generator from the list');
     const isDirectory = (path) => fs.lstatSync(path).isDirectory();
-    console.log(fs.readdirSync(basePath))
+    const templates = fs.readdirSync(basePath).map(t => t.slice(0, t.lastIndexOf('.js')))
+    console.log(templates)
     return;
   }
   var template = require(templatePath);
