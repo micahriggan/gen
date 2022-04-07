@@ -4,7 +4,7 @@ module.exports = {
   tsi: require('./npm-ts'),
   tsinstall: require('./npm-ts'),
   nodeDotFiles: require('./nodeDotFiles'),
-  tsDotFiles: require('./tsDotFiles'),
+  tsinit: require('./ts-init'),
   ngComp: require('./ng-component'),
   readme: require('./readme')
 };

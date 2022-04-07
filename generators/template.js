@@ -20,7 +20,7 @@ module.exports = function(templateData, data) {
   if (typeof(template) === 'function'){
     template = template(data);
   }
-  fs.writeFile(fileName, template, (err) => {
+  fs.writeFileSync(fileName, template, (err) => {
     if (err) {
       console.log(err);
     } else {
