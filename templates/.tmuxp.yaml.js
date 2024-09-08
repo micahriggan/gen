@@ -1,22 +1,41 @@
 module.exports =
 `
 session_name: coding
+start_directory: ./
 windows:
-- window_name: vim
-  shell_command_before:
-  - cd .
-  panes:
-  - vim
-- window_name: npm/git
-  shell_command_before:
-  - cd .
-  panes:
-  - git status
-  - npm start
-- window_name: testing
-  shell_command_before:
-  - cd .
-  panes:
-  - echo "tests"
-  - echo "tests"
+  - window_name: all
+    layout: main-vertical
+    options:
+      main-pane-width: 50%
+    panes:
+      - shell_command:
+        - vim
+      - shell_command:
+      - shell_command:
+      - shell_command:
+
+  - window_name: frontend
+    layout: main-vertical
+    options:
+      main-pane-width: 50%
+    start_directory: ./packages/frontend
+    panes:
+      - shell_command:
+        - vim
+      - shell_command:
+        - yarn dev
+      - shell_command:
+      - shell_command:
+
+  - window_name: contracts
+    layout: main-vertical
+    options:
+      main-pane-width: 50%
+    start_directory: ./packages/contracts
+    panes:
+      - shell_command:
+        - vim
+      - shell_command:
+      - shell_command:
+      - shell_command:
 `;
